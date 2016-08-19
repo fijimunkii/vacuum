@@ -1,0 +1,10 @@
+{
+  "MAPBOX_ID": "fijimunkii.XXXXXXXXXX",
+  "jwt-secret": "not-so-secret",
+  "domain-map": {
+    "mapbox": "image/png",
+    "gstatic.com/images": "image/jpeg",
+    "maps.googleapis.com/maps/api/streetview": "image/jpeg",
+    "assets-cdn.github.com/images/icons/emoji": "image/png"
+  }
+}

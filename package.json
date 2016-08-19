@@ -1,0 +1,33 @@
+{
+  "name": "vacuum",
+  "version": "0.1.0",
+  "description": "Referrer hiding proxy server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fijimunkii/vacuum.git"
+  },
+  "author": "Harrison Powers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fijimunkii/vacuum/issues"
+  },
+  "homepage": "https://github.com/fijimunkii/vacuum#readme",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "etl": "^0.3.18",
+    "express": "^4.14.0",
+    "express-jwt": "^3.4.0",
+    "glob": "7.0.5",
+    "helmet": "2.1.2",
+    "hpp": "0.2.1",
+    "mime-types": "^2.1.11",
+    "nconf": "^0.8.4",
+    "request": "^2.74.0",
+    "rollbar": "0.6.2"
+  }
+}
