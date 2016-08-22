@@ -9,7 +9,7 @@ app.use(require('hpp')());
 
 //app.use(require('express-jwt')({ secret: env.get('jwt-secret') }));
 
-app.use(require('./filters'));
+app.use('/:dest', require('./filters'));
 
 app.use('/:dest', require('./lib/proxy'));
 

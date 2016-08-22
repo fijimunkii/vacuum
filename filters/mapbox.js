@@ -3,17 +3,16 @@ if (!mapboxId)
   console.log('Missing env: MAPBOX_ID');
 
 module.exports = (req,res,next) => {
-  var dest = decodeURIComponent(req.params.dest);
-  if (!/maptiles/.test(dest))
+  var dest = req.originalUrl;
+  if (!/mapbox/.test(dest))
     return next();
 
-  var url = require('url');
-  var params = require('querystring').parse(url.parse(dest).query);
+  var params = require('querystring').parse(String(/\?.*/.exec(dest)[0]).replace('?',''));
 
   dest = 'https://'+params.s+'.tiles.mapbox.com/v3/'+mapboxId+'/'+
     params.z+'/'+params.x+'/'+params.y+'.png';
 
-  req.params.dest = encodeURIComponent(dest);
+  req.url = '/'+encodeURIComponent(dest);
 
   next();
 };
